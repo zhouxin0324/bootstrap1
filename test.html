@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8" />
+    <title>transparent_CSS参考手册_web前端开发参考手册系列</title>
+    <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+    <style>
+        .test {
+            color: transparent;
+            border: 1px solid transparent;
+            background: transparent;
+        }
+        .cert{
+            display: inline-block;
+            width:0;
+            height: 0;
+            border-top:10px dashed #000;
+            border-top:10px solid  #000 \9;
+            border-right:10px solid #2b542c;
+            border-left:10px solid #2b542c;
+        }
+        .img-thumbnail {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            padding: 4px;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: all 12s ease-in-out;
+            -o-transition: all 12s ease-in-out;
+            transition: all 12s ease-in-out;
+        }
+        .pagination {
+            display: inline-block;
+            padding-left: 0;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .pagination > li {
+            display: inline;
+        }
+        .pagination > li > a,
+        .pagination > li > span {
+            font-size:50px;
+            position: relative;
+            float: left;
+            padding: 0 12px;
+            /*text-align: center;*/
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .jumbotron {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            color: inherit;
+            background-color: #eee;
+        }
+        .jumbotron h1,
+        .jumbotron .h1 {
+            color: inherit;
+        }
+        .jumbotron p {
+            margin-bottom: 15px;
+            font-size: 21px;
+            font-weight: 200;
+        }
+        .jumbotron > hr {
+            border-top-color: #d5d5d5;
+        }
+        .container .jumbotron,
+        .container-fluid .jumbotron {
+            padding-right: 15px;
+            padding-left: 15px;
+            border-radius: 6px;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            display: none;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+        }
+        .modal.fade .modal-dialog {
+            -webkit-transition: -webkit-transform .3s ease-out;
+            -o-transition:      -o-transform .3s ease-out;
+            transition:         transform .3s ease-out;
+            -webkit-transform: translate(0, -25%);
+            -ms-transform: translate(0, -25%);
+            -o-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+        }
+        .modal.in .modal-dialog {
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        .modal-open .modal {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            outline: 0;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+        }
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: #000;
+        }
+        .modal-backdrop.fade {
+            filter: alpha(opacity=0);
+            opacity: 0;
+        }
+        .modal-backdrop.in {
+            filter: alpha(opacity=50);
+            opacity: .5;
+        }
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .modal-header .close {
+            margin-top: -2px;
+        }
+        .modal-title {
+            margin: 0;
+            line-height: 1.42857143;
+        }
+        .modal-body {
+            position: relative;
+            padding: 15px;
+        }
+        .modal-footer {
+            padding: 15px;
+            text-align: right;
+            border-top: 1px solid #e5e5e5;
+        }
+        .modal-footer .btn + .btn {
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
+        .modal-footer .btn-group .btn + .btn {
+            margin-left: -1px;
+        }
+        .modal-footer .btn-block + .btn-block {
+            margin-left: 0;
+        }
+        .modal-scrollbar-measure {
+            position: absolute;
+            top: -9999px;
+            width: 50px;
+            height: 50px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="test">看看各带color的属性设置为transparent时的效果</div>
+<div><span class="cert"></span></div>
+    <img src="images/1.jpg" class="img-thumbnail">
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+<div class="container">
+<div class="jumbotron">
+    <h1>欢迎登陆页面！</h1>
+    <p>这是一个超大屏幕（Jumbotron）的实例。</p>
+    <p><a class="btn btn-primary btn-lg" role="button">
+        学习更多</a>
+    </p>
+</div>
+</div>
+<h2>创建模态框（Modal）</h2>
+<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    开始演示模态框
+</button>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    模态框（Modal）标题
+                </h4>
+            </div>
+            <div class="modal-body">
+                在这里添加一些文本
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+</html>
+</body>
+</html>

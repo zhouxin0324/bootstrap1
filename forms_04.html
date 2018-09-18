@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- 引入 Bootstrap -->
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+//垂直表单 在input、texteare、select增加class为form-control
+<form role="form" >
+    <div class="form-group">
+        <label for="name" >名称</label>
+        <input type="text" class="form-control" id="name" placeholder="请输入名称">
+    </div>
+    <div class="form-group">
+        <label for="inputfile">文件输入</label>
+        <input type="file" id="inputfile">
+        <p class="help-block">这里是块级帮助文本的实例。</p>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox">请打勾
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default">提交</button>
+</form>
+//inline表单 form增加class为form-inline,label增加class为sr-only
+<form class="form-inline" role="form">
+    <div class="form-group">
+        <label class="sr-only" for="name">名称</label>
+        <input type="text" class="form-control" id="name" placeholder="请输入名称">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="inputfile">文件输入</label>
+        <input type="file" id="inputfile">
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox">请打勾
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default">提交</button>
+</form>
+//水平显示表单，form增加class为form-horizontal,table增加class为control-label
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="firstname" class="col-sm-2 control-label">名字</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastname" class="col-sm-2 control-label">姓</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">请记住我
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">登录</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
